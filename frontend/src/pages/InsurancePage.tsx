@@ -101,7 +101,7 @@ export const InsurancePage: React.FC = () => {
           <div class="card">
             <div class="header">
               <div>
-                <h2>Greenticker Financial Services LLP</h2>
+                <h2>Vyas</h2>
                 <p style="color: #5eead4; font-size: 12px; margin: 0;">Group Medical Insurance E-Card</p>
               </div>
               <div style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: bold;">
@@ -453,7 +453,7 @@ export const InsurancePage: React.FC = () => {
                   GT
                 </div>
                 <div>
-                  <h3 className="text-base font-black tracking-wide">Greenticker Financial Services LLP</h3>
+                  <h3 className="text-base font-black tracking-wide">Vyas</h3>
                   <p className="text-xs text-teal-300">Group Medical Insurance E-Card</p>
                 </div>
               </div>

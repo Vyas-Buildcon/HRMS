@@ -167,7 +167,7 @@ class ModulesStore:
         return sorted(items, key=lambda p: p.get("month") or "", reverse=True)
 
     def build_payslip(self, emp: dict, month_str: str, month_name: str, overrides: Optional[dict] = None) -> Optional[dict]:
-        """Builds one monthly payslip from the Greenticker salary structure (FY 2026-27).
+        """Builds one monthly payslip from the Vyas salary structure (FY 2026-27).
         Returns None when the employee has no usable CTC."""
         annual_ctc = to_number(emp.get("annualSalary"))
         if annual_ctc <= 0:
@@ -855,7 +855,7 @@ class ModulesStore:
             "{{probation_end_date}}": (emp or {}).get("probationEndDate") or "[probation end date]",
             "{{employee_address}}": address_text,
             "{{letter_date}}": letter_date(),
-            "{{company_name}}": org.get("name") if org else "vetan.ai",
+            "{{company_name}}": org.get("name") if org else "Vyas",
             "{{company_address}}": (
                 f"{org_address.get('street')}, {org_address.get('city')}, {org_address.get('state')} {org_address.get('zipCode')}"
                 if org and org_address else "Global HQ"

@@ -165,8 +165,8 @@ export const PayrollPage: React.FC = () => {
       <div style="page-break-after: always; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; margin-bottom: 32px; background: #fff;">
         <div style="display:flex; justify-between; align-items:center; border-bottom:2px solid #0f172a; padding-bottom:12px; margin-bottom:16px;">
           <div>
-            <h2 style="font-size:18px; font-weight:bold; margin:0; color:#0f172a;">GREENTICKER FINANCIAL SERVICES LLP</h2>
-            <p style="font-size:11px; color:#64748b; margin:2px 0 0 0;">vetan.ai Enterprise Payroll & Tax Statement</p>
+            <h2 style="font-size:18px; font-weight:bold; margin:0; color:#0f172a;">Vyas</h2>
+            <p style="font-size:11px; color:#64748b; margin:2px 0 0 0;">Vyas Enterprise Payroll & Tax Statement</p>
           </div>
           <div style="text-align:right;">
             <span style="font-size:12px; font-weight:bold; background:#f1f5f9; padding:4px 8px; border-radius:6px;">${slip.monthName}</span>
@@ -611,9 +611,9 @@ export const PayrollPage: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <VetanLogo className="w-10 h-10" />
                     <div>
-                      <h2 className="text-base font-bold text-slate-900">GREENTICKER FINANCIAL SERVICES LLP</h2>
+                      <h2 className="text-base font-bold text-slate-900">Vyas</h2>
                       <p className="text-[11px] text-slate-500 font-mono">
-                        vetan.ai HR Enterprise Operating Portal
+                        Vyas HR Enterprise Operating Portal
                       </p>
                     </div>
                   </div>

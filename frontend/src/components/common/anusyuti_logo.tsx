@@ -1,8 +1,4 @@
 import React from 'react';
-import emblemImage from '../../assets/image/anusyuti_emblem.png';
-import fullImage from '../../assets/image/anusyuti_full.png';
-import iconImage from '../../assets/image/anusyuti_icon.png';
-import logoImage from '../../assets/image/anusyuti logo.png';
 
 export interface VetanLogoProps {
   className?: string;
@@ -21,7 +17,6 @@ export const VetanLogo: React.FC<VetanLogoProps> = ({
   subtitleText = '',
   theme = 'auto',
 }) => {
-  // Sizing scale with prominent dimensions
   const dimensions = {
     xs: { imgH: 26, iconBox: 28, text: 'text-xs', sub: 'text-[9px]' },
     sm: { imgH: 34, iconBox: 38, text: 'text-sm font-black', sub: 'text-[10px]' },
@@ -31,59 +26,46 @@ export const VetanLogo: React.FC<VetanLogoProps> = ({
   };
 
   const dim = dimensions[size] || dimensions.md;
+  const isDark = theme === 'dark';
+  const markClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#039583] to-[#023b77] font-black text-white shadow-sm ${dim.text}`;
 
-  // Icon only variant
   if (variant === 'icon') {
     return (
       <div
         className={`inline-flex items-center justify-center rounded-xl bg-white/95 border border-slate-200/80 shadow-xs p-1.5 transition-transform duration-200 hover:scale-105 ${className}`}
         style={{ width: dim.iconBox, height: dim.iconBox }}
-        title="vetan.ai"
+        title="Vyas"
       >
-        <img
-          src={emblemImage || iconImage || logoImage}
-          alt="vetan.ai"
-          referrerPolicy="no-referrer"
-          className="object-contain w-full h-full drop-shadow-xs"
-        />
+        <span aria-label="Vyas" className={`${markClass} h-full w-full`}>V</span>
       </div>
     );
   }
 
-  // Direct image variant (clean transparent full logo)
   if (variant === 'image') {
     return (
-      <div className={`inline-flex items-center justify-center ${className}`}>
-        <img
-          src={fullImage || logoImage}
-          alt="vetan.ai"
-          referrerPolicy="no-referrer"
-          className="object-contain filter drop-shadow-xs transition-transform duration-200 hover:scale-[1.02]"
-          style={{ height: dim.imgH, maxWidth: '100%' }}
-        />
-      </div>
+      <span className={`inline-flex items-center font-black tracking-tight text-[#023b77] ${dim.text} ${className}`}>
+        Vyas
+      </span>
     );
   }
 
-  // Horizontal variant: Emblem + crisp bold typography
   if (variant === 'horizontal') {
-    const isDark = theme === 'dark';
     return (
       <div className={`inline-flex items-center gap-2.5 select-none ${className}`}>
-        <img
-          src={emblemImage || iconImage || logoImage}
-          alt="vetan.ai"
-          referrerPolicy="no-referrer"
-          className="object-contain shrink-0 filter drop-shadow-xs transition-transform duration-200 hover:scale-105"
-          style={{ height: dim.imgH }}
-        />
+        <span
+          aria-hidden="true"
+          className={markClass}
+          style={{ width: dim.iconBox, height: dim.iconBox }}
+        >
+          V
+        </span>
         <div className="flex flex-col leading-tight">
           <span
             className={`font-black tracking-tight ${dim.text} ${
               isDark ? 'text-white' : 'text-[#023b77]'
             }`}
           >
-            vetan.ai
+            Vyas
           </span>
           {showSubtitle && subtitleText && (
             <span
@@ -99,18 +81,15 @@ export const VetanLogo: React.FC<VetanLogoProps> = ({
     );
   }
 
-  // Full stacked variant (default)
   return (
     <div className={`inline-flex flex-col items-center justify-center gap-1.5 ${className}`}>
       <div className="flex items-center gap-2">
-        <img
-          src={emblemImage || iconImage || logoImage}
-          alt="vetan.ai"
-          referrerPolicy="no-referrer"
-          className="object-contain rounded-lg transition-transform duration-200 hover:scale-[1.02] filter drop-shadow-xs shrink-0"
-          style={{ height: dim.imgH, maxWidth: '100%' }}
-        />
-        <span className={`font-black tracking-tight text-[#023b77] ${dim.text}`}>vetan.ai</span>
+        <span aria-hidden="true" className={markClass} style={{ width: dim.iconBox, height: dim.iconBox }}>
+          V
+        </span>
+        <span className={`font-black tracking-tight ${isDark ? 'text-white' : 'text-[#023b77]'} ${dim.text}`}>
+          Vyas
+        </span>
       </div>
       {showSubtitle && subtitleText && (
         <span className="text-[11px] font-bold tracking-widest text-[#039583] uppercase mt-0.5">

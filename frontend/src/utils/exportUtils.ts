@@ -89,11 +89,11 @@ export function exportToPdf(
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(14);
   doc.setFont('helvetica', 'bold');
-  doc.text('GREENTICKER FINANCIAL SERVICES', 14, 11);
+  doc.text('VYAS', 14, 11);
 
   doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
-  doc.text('vetan.ai HR Enterprise Operating Portal', 14, 17);
+  doc.text('Vyas HR Enterprise Operating Portal', 14, 17);
 
   doc.text(`Generated: ${timestamp}`, doc.internal.pageSize.width - 14, 14, { align: 'right' });
 

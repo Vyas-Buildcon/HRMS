@@ -58,7 +58,7 @@ const TAB_ALIASES: Record<string, string> = {
 
 /** Page titles shown in the navbar, keyed by canonical tab ID. */
 const SECTION_TITLES: Record<string, string> = {
-  dashboard: 'vetan.ai',
+  dashboard: 'Vyas',
   employees: 'Employees Directory',
   employee_detail: 'Employee Profile',
   organization: 'Organization & Departments',
@@ -169,7 +169,7 @@ function MainApp() {
             V
           </div>
           <p className="text-xs font-semibold text-slate-500 font-mono">
-            Initializing vetan.ai...
+            Initializing Vyas...
           </p>
         </div>
       </div>

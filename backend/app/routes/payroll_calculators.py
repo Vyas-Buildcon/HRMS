@@ -52,7 +52,7 @@ async def income_tax_options(user: dict = Depends(require_auth)):
 
 @router.get("/payroll/income-tax/prefill")
 async def income_tax_prefill(employeeId: Optional[str] = None, user: dict = Depends(require_auth)):
-    """Calculator inputs built from the employee's CTC (Greenticker salary structure) and their
+    """Calculator inputs built from the employee's CTC (Vyas salary structure) and their
     saved tax declaration. Example-only values from the workbook are cleared."""
     emp = _target_employee(user, employeeId)
     inputs = income_tax.default_inputs()

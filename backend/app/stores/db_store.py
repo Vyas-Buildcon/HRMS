@@ -53,7 +53,7 @@ DEMO_ACCOUNTS = {
     "hr@vetan.ai": {"role": "HR", "firstName": "Aditya", "lastName": "Kapoor", "pass": "HR@12345", "empCode": "RHA-008", "dept": "People Operations & HR", "desig": "Senior HR Operations Lead"},
     "accounts@vetan.ai": {"role": "ACCOUNTS", "firstName": "Neha", "lastName": "Deshmukh", "pass": "Accounts@12345", "empCode": "RHA-030", "dept": "Finance & Compliance", "desig": "Senior Accounts Officer"},
     "auditor@vetan.ai": {"role": "AUDITORS", "firstName": "Tanvi", "lastName": "Agarwal", "pass": "Auditor@12345", "empCode": "RHA-040", "dept": "Legal & Governance", "desig": "Statutory Compliance Auditor"},
-    "omkar@greenticker.in": {"role": "ADMIN", "firstName": "Omkar", "lastName": "Despande", "pass": "Admin@12345", "empCode": "RHA-001", "dept": "Executive Board", "desig": "Chief Executive Officer"},
+    "omkar@vyas.in": {"role": "ADMIN", "firstName": "Omkar", "lastName": "Despande", "pass": "Admin@12345", "empCode": "RHA-001", "dept": "Executive Board", "desig": "Chief Executive Officer"},
     "manager@vetan.ai": {"role": "MANAGER", "firstName": "Arjun", "lastName": "Khanna", "pass": "Manager@12345", "empCode": "RHA-012", "dept": "Engineering & Technology", "desig": "Engineering Manager"},
     "employee@vetan.ai": {"role": "EMPLOYEE", "firstName": "Rohan", "lastName": "Verma", "pass": "Employee@12345", "empCode": "RHA-101", "dept": "Engineering & Technology", "desig": "Senior Software Engineer"},
     "newhire@vetan.ai": {"role": "EMPLOYEE", "firstName": "Ishita", "lastName": "Iyer", "pass": "NewHire@12345", "empCode": "RHA-201", "dept": "Product & Design", "desig": "Product Designer"},

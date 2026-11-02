@@ -5,11 +5,12 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from app.config import FRONTEND_DIST, PORT, is_production
+from app.config import CORS_ORIGINS, FRONTEND_DIST, PORT, is_production
 from app.database import persistence
 from app.errors import ApiError
 from app.routes import (
@@ -46,7 +47,15 @@ async def lifespan(_: FastAPI):
     await persistence.flush_and_close()
 
 
-app = FastAPI(title="vetan.ai HRMS API", version="2.0.0", lifespan=lifespan, docs_url="/api/docs", openapi_url="/api/openapi.json", redoc_url=None)
+app = FastAPI(title="Vyas HRMS API", version="2.0.0", lifespan=lifespan, docs_url="/api/docs", openapi_url="/api/openapi.json", redoc_url=None)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=CORS_ORIGINS,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # ------------------------------------------------------------------ errors
@@ -120,4 +129,4 @@ elif is_production():
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("app.main:app", host="0.0.0.0", port=PORT)
+    uvicorn.run("main:app", host="0.0.0.0", port=PORT)

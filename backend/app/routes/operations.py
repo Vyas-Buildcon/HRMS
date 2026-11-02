@@ -241,7 +241,7 @@ async def ai_chat(request: Request, _: dict = Depends(require_auth)):
     if not api_key:
         raise ApiError(500, "GEMINI_API_KEY is not configured on the server.")
 
-    full_prompt = f"""You are the vetan.ai HR Assistant for vetan.ai HRMS.
+    full_prompt = f"""You are the Vyas HR Assistant for Vyas HRMS.
 Here is the complete list of official company policies currently registered in the organization:
 {policy_context or 'No company policies uploaded yet.'}
 

@@ -12,7 +12,7 @@ interface LoginPageProps {
 
 export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess, onNavigateToSignup, onNavigateToRegisterCompany }) => {
   const { login } = useAuth();
-  const [email, setEmail] = useState('omkar@greenticker.in');
+  const [email, setEmail] = useState('omkar@vyas.in');
   const [password, setPassword] = useState('Admin@12345');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);

@@ -15,7 +15,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({
   onOpenNotifications,
   unreadCount = 2,
-  currentSectionTitle = 'vetan.ai.',
+  currentSectionTitle = 'Vyas',
   isSidebarOpen,
   onToggleSidebar,
 }) => {

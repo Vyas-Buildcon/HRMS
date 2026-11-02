@@ -1,6 +1,6 @@
 /**
  * Salary structure calculator (FY 2026-27)
- * Mirrors the Greenticker "Salary Structure" sheet:
+ * Mirrors the Vyas "Salary Structure" sheet:
  *
  * WAGES (must be >= 50% of CTC)
  *   Basic                  = 23.9% of CTC

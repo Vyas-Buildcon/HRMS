@@ -180,7 +180,7 @@ async def download_document(doc_id: str, _: dict = Depends(require_auth)):
             return FileResponse(physical, filename=doc.get("fileName"))
 
     content = (
-        "%PDF-1.4\n% vetan.ai HRMS Enterprise Compliance Document Vault\n"
+        "%PDF-1.4\n% Vyas HRMS Enterprise Compliance Document Vault\n"
         f"Document: {doc.get('title')}\nEmployee: {doc.get('employeeName')} ({doc.get('employeeCode')})\n"
         f"Department: {doc.get('department')}\nCategory: {doc.get('category')}\nStatus: {doc.get('status')}\n"
         f"Verified By: {doc.get('verifiedBy') or 'Pending'}\nTimestamp: {doc.get('uploadedAt')}\n"

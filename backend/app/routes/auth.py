@@ -30,7 +30,7 @@ DEMO_PASSWORDS = {
     "hr@vetan.ai": "HR@12345",
     "accounts@vetan.ai": "Accounts@12345",
     "auditor@vetan.ai": "Auditor@12345",
-    "omkar@greenticker.in": "Admin@12345",
+    "omkar@vyas.in": "Admin@12345",
     "manager@vetan.ai": "Manager@12345",
     "employee@vetan.ai": "Employee@12345",
     "newhire@vetan.ai": "NewHire@12345",
@@ -44,7 +44,7 @@ ROLE_DEMO_EMAILS = {
     "HR": "hr@vetan.ai",
     "ACCOUNTS": "accounts@vetan.ai",
     "AUDITORS": "auditor@vetan.ai",
-    "ADMIN": "omkar@greenticker.in",
+    "ADMIN": "omkar@vyas.in",
     "MANAGER": "manager@vetan.ai",
     "EMPLOYEE": "employee@vetan.ai",
 }
@@ -62,7 +62,7 @@ async def health():
     return {
         "status": "healthy",
         "timestamp": now_iso(),
-        "service": "vetan.ai HRMS API (FastAPI + Python)",
+        "service": "Vyas HRMS API (FastAPI + Python)",
     }
 
 
@@ -273,7 +273,7 @@ async def me(user: dict = Depends(require_auth)):
 async def switch_role(request: Request):
     body = await read_body(request)
     target_role = body.get("targetRole")
-    email = ROLE_DEMO_EMAILS.get(target_role) or "omkar@greenticker.in"
+    email = ROLE_DEMO_EMAILS.get(target_role) or "omkar@vyas.in"
     user = db_store.find_user_by_email(email)
     if not user:
         raise ApiError(404, f"Demo user for role {js_str(target_role) if target_role is not None else 'undefined'} not found.")

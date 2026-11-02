@@ -62,7 +62,7 @@ export const OrganizationPage: React.FC = () => {
         body: JSON.stringify({
           managerEmail: `${contactManagerModal.name.toLowerCase().replace(/\s+/g, '.')}@vetan.ai`,
           managerName: contactManagerModal.name,
-          subject: contactSubject || `Inquiry regarding vetan.ai HRMS`,
+          subject: contactSubject || `Inquiry regarding Vyas HRMS`,
           message: contactMessage,
         }),
       });

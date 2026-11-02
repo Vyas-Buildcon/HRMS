@@ -120,7 +120,7 @@ export const SetPasswordPage: React.FC<SetPasswordPageProps> = ({ onDone: _onDon
           </div>
           <div>
             <h1 className="text-xl font-bold tracking-tight text-white">Set Account Password</h1>
-            <p className="text-xs text-slate-400">Secure your vetan.ai HR account</p>
+            <p className="text-xs text-slate-400">Secure your Vyas HR account</p>
           </div>
         </div>
 

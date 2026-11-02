@@ -24,7 +24,7 @@ from app.utils.salary_structure import compute_salary_structure
 
 outbox: list = []
 
-DEFAULT_FROM = "vetan.ai HR <noreply@mantriaiprojects.com>"
+DEFAULT_FROM = "Vyas HR <noreply@mantriaiprojects.com>"
 
 
 def _resend_api_key() -> Optional[str]:
@@ -220,7 +220,7 @@ async def send_mail(mail: dict) -> dict:
 # ------------------------------------------------------------------
 
 def _company() -> str:
-    return os.environ.get("COMPANY_NAME") or "vetan.ai"
+    return os.environ.get("COMPANY_NAME") or "Vyas"
 
 
 def esc(v) -> str:

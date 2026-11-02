@@ -43,7 +43,7 @@ export const SignupPage: React.FC<SignupPageProps> = ({ onSuccess, onNavigateToL
           Create Employee Account
         </h2>
         <p className="mt-1 text-xs text-slate-500">
-          Register to join the vetan.ai platform
+          Register to join the Vyas platform
         </p>
       </div>
 

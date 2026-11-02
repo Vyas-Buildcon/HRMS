@@ -314,7 +314,7 @@ async def onboarding_complete(request: Request, user: dict = Depends(require_aut
 
     return {
         "success": True,
-        "message": "Onboarding submitted for HR verification. Welcome to vetan.ai HRMS!",
+        "message": "Onboarding submitted for HR verification. Welcome to Vyas HRMS!",
         "onboardingCompleted": True,
     }
 

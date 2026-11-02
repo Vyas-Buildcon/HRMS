@@ -5,7 +5,7 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, process.cwd(), '');
-  // Express backend that serves /api and /uploads (see backend/server.ts)
+  // FastAPI backend serving /api and /uploads
   const backendUrl = env.VITE_BACKEND_URL || 'http://localhost:5000';
 
   return {

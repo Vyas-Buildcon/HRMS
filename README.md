@@ -1,14 +1,15 @@
-# Vetan.ai HRMS
+# Vyas HRMS
 
 ```
-greenticker-hrms/
+vyas-hrms/
 ├── frontend/          React 19 + Vite + Tailwind SPA (dev server on :3000)
 │   ├── src/           pages, components, services, types, shared (salaryStructure.ts)
 │   ├── public/        static assets (favicon, PDFs)
 │   └── index.html
 └── backend/           FastAPI + MongoDB API (Python, on :5000)
+    ├── main.py        FastAPI entry point
     ├── app/
-    │   ├── main.py    entry point (routers, error handling, static files)
+    │   ├── main.py    application setup (routers, error handling, static files)
     │   ├── config.py  settings read from backend/.env
     │   ├── routes/    API endpoints, one module per area (auth, employees, payroll, ...)
     │   ├── auth/      JWT + bcrypt, RBAC permissions
@@ -17,11 +18,13 @@ greenticker-hrms/
     │   ├── services/  mailer (Resend, Brevo, SMTP)
     │   ├── utils/     salary structure, geofence, overtime, JS-compatible helpers
     │   └── templates/ letter template gallery
+    ├── scripts/       backend maintenance and seed scripts
     ├── data/          local JSON copy of the data (hrms_store.json)
     ├── uploads/       runtime uploads (created automatically, git-ignored)
+    ├── archive/       inactive FastAPI prototype (not used by the app)
     └── requirements.txt
 ```
-The root `package.json` only holds the launcher scripts that start both apps.
+The backend has one virtual environment at `backend/.venv`. The root `package.json` holds launcher scripts for both apps.
 
 ## Prerequisites
 - Python 3.12+ (tested with 3.14) and Node.js 20+
@@ -46,7 +49,7 @@ Run them separately with `npm run dev:backend` / `npm run dev:frontend`, or star
 ```powershell
 cd backend
 .venv\Scripts\Activate.ps1
-uvicorn app.main:app --reload --port 5000
+uvicorn main:app --reload --port 5000
 ```
 
 ## Demo data

@@ -770,7 +770,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onComplete }) =>
                 )}
               </div>
               <h1 className="text-xl font-bold text-slate-900 mt-2">
-                Welcome to vetan.ai HRMS, {user?.firstName}!
+                Welcome to Vyas HRMS, {user?.firstName}!
               </h1>
               <p className="text-xs text-slate-500 mt-1">
                 Please complete your onboarding profile. This ensures your payroll, statutory benefits, and insurance are set up correctly.

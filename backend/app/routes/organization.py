@@ -337,12 +337,12 @@ async def contact_manager(request: Request, user: dict = Depends(require_auth)):
     try:
         result = await send_mail({
             "to": manager_email,
-            "subject": body.get("subject") or f"Inquiry regarding vetan.ai HRMS from {sender}",
+            "subject": body.get("subject") or f"Inquiry regarding Vyas HRMS from {sender}",
             "html": f"""<div style="font-family:sans-serif;padding:20px;border:1px solid #e2e8f0;border-radius:12px;">
         <h2 style="color:#023b77;margin-top:0;">Message for {label}</h2>
         <p>{message_text.replace(chr(10), '<br/>')}</p>
         <hr style="border:none;border-top:1px solid #e2e8f0;margin:16px 0;" />
-        <p style="font-size:12px;color:#64748b;">Sent via vetan.ai HRMS Enterprise Portal by {sender} ({user.get('email')})</p>
+        <p style="font-size:12px;color:#64748b;">Sent via Vyas HRMS Enterprise Portal by {sender} ({user.get('email')})</p>
       </div>""",
             "text": f"Message for {label}:\n\n{message_text}\n\nSent by {sender} ({user.get('email')})",
         })

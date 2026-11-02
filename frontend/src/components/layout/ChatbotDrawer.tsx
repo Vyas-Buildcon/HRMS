@@ -28,7 +28,7 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({ isOpen, onToggle, 
     {
       id: 'welcome',
       sender: 'assistant',
-      text: `Hello ${user?.firstName || 'there'}! I am your vetan.ai HR Assistant. I can help answer questions regarding company policies, leave guidelines, working hours, benefits, and HR procedures.`,
+      text: `Hello ${user?.firstName || 'there'}! I am your Vyas HR Assistant. I can help answer questions regarding company policies, leave guidelines, working hours, benefits, and HR procedures.`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -218,7 +218,7 @@ export const ChatbotDrawer: React.FC<ChatbotDrawerProps> = ({ isOpen, onToggle, 
               </div>
               <div>
                 <h3 className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <span>vetan.ai HR Assistant</span>
+                  <span>Vyas HR Assistant</span>
                   <span className="inline-flex items-center gap-1 text-[9px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-1.5 py-0.5 rounded-full font-medium">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                     Online

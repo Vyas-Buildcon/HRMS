@@ -534,7 +534,7 @@ export const EmployeeDetailPage: React.FC<EmployeeDetailPageProps> = ({ employee
               <div className="border-l-2 border-slate-200 ml-3 pl-4 space-y-4 text-xs">
                 <div>
                   <span className="font-mono text-[10px] text-slate-400">{employee.joiningDate}</span>
-                  <p className="font-bold text-slate-900">Joined vetan.ai</p>
+                  <p className="font-bold text-slate-900">Joined Vyas</p>
                   <p className="text-[11px] text-slate-500">Initial appointment as {employee.designation}</p>
                 </div>
               </div>
@@ -554,7 +554,7 @@ export const EmployeeDetailPage: React.FC<EmployeeDetailPageProps> = ({ employee
                 ))}
                 <div>
                   <span className="font-mono text-[10px] text-slate-400">{employee.joiningDate}</span>
-                  <p className="font-bold text-slate-900">Joined vetan.ai</p>
+                  <p className="font-bold text-slate-900">Joined Vyas</p>
                   <p className="text-[11px] text-slate-500">Initial appointment as {employee.designation}</p>
                 </div>
               </div>
