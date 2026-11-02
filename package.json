@@ -1,0 +1,17 @@
+{
+  "name": "vetan-hrms",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "cd backend && py -3.14 -m venv .venv && .venv\\Scripts\\python -m pip install -r requirements.txt && cd .. && npm install --prefix frontend",
+    "dev": "concurrently -n backend,frontend -c green,cyan \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && .venv\\Scripts\\python -m uvicorn app.main:app --reload --port 5000",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "seed:demo": "cd backend && .venv\\Scripts\\python scripts\\seed_demo_data.py",
+    "build": "npm run build --prefix frontend",
+    "start": "cd backend && .venv\\Scripts\\python -m uvicorn app.main:app --host 0.0.0.0 --port 5000"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
